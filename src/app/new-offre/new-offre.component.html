@@ -1,0 +1,118 @@
+<div>
+    <br>
+    <br>
+    <form class="container shadow-lg p-3 mb-3 bg-body rounded">
+        <h2 class="text-center text-dark mb-4">Ajouter une offre</h2>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Titre de l'offre:
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            formControlName="Titre de l'offre"
+                            id="code-name"
+                            placeholder="Entrez un titre"
+                        >
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="libelle-name"
+                            class="col-form-label"
+                        >
+                            Description du poste:
+                        </label>
+                        <input
+                            type="file"
+                            class="form-control"
+                            id="libelle-text"
+                            formControlName="description"
+                            placeholder="Entrez la description du poste"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- deb -->
+        <div class="form-group">
+            <div class="row">
+                <!-- <div class="row"> -->
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Date expiration:
+                        </label>
+                        <input
+                            type="date"
+                            class="form-control"
+                            formControlName="datefin"
+                            id="code-name"
+                            placeholder="Entrez la date d'expiration"
+                        >
+                    </div>
+
+                    <!-- </div> -->
+
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Date publication:
+                        </label>
+                        <input
+                            type="date"
+                            class="form-control"
+                            formControlName="datedeb"
+                            id="code-name"
+                            placeholder="Entrez la date de publication"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <!-- fin -->
+
+        <!-- deb -->
+        <div class="form-group"></div>
+        <!-- fin -->
+        <div class="d-flex justify-content-center align-items-center">
+            <button
+                type="submit"
+                class="btn btn-success"
+            >
+                Enregistrer
+            </button>
+
+            <a
+                type="button"
+                class="btn btn-info"
+                routerLink="/admin"
+            >
+                Annuler
+            </a>
+        </div>
+    </form>
+
+    <br>
+    <br>
+</div>

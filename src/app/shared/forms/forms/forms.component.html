@@ -1,0 +1,140 @@
+<div>
+    <br>
+    <br>
+    <form class="container shadow-lg p-3 mb-3 bg-body rounded" [formGroup]="postule">
+        <h2 class="text-center text-dark mb-4">Postuler à l'offre {{titreOffre}}</h2>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Nom:
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            formControlName="nom"
+                            id="code-name"
+                            placeholder="Entrez votre nom"
+                        >
+                    </div>
+
+                </div>
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="libelle-name"
+                            class="col-form-label"
+                        >
+                            Prénom:
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="libelle-text"
+                            formControlName="prenom"
+                            placeholder="Entrez votre prénom"
+                        >
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Email:
+                        </label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            formControlName="email"
+                            id="code-name"
+                            placeholder="Entrez votre email"
+                        >
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Charge CV:
+                        </label>
+                        <input
+                            type="file"
+                            class="form-control"
+                            formControlName="cv"
+                            id="code-name"
+                            placeholder="Chargez votre CV"
+                            (change)="onFileSelected($event)"
+                        >
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- deb -->
+        <div class="form-group">
+            <div class="row">
+                <div class="col-6">
+                    <div class="mb-1">
+                        <label
+                            for="code-name"
+                            class="col-form-label"
+                        >
+                            Contact:
+                        </label>
+                        <input
+                            type="text"
+                            class="form-control"
+                            formControlName="contact"
+                            id="code-name"
+                            placeholder="Entrez votre contact"
+                        >
+                    </div>
+
+                </div>
+
+               
+
+            </div>
+
+        </div>
+        <!-- fin -->
+
+        
+        <div class="d-flex justify-content-center align-items-center">
+            <button
+                type="submit"
+                class="btn btn-success"
+                (click)="save()"
+            >
+                Envoyer
+            </button>
+
+               <a
+                type="button"
+                class="btn btn-info"
+                routerLink="/home"
+            >
+                Annuler
+            </a>
+        </div>
+    </form>
+
+    <br>
+    <br>
+</div>
