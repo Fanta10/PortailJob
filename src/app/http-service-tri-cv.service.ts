@@ -9,7 +9,17 @@ export class HttpServiceTriCVService {
 
   constructor(private http: HttpClient) { }
 
-  postTricv(data: any): Observable<any>{
-    return this.http.post<any>('https://4b55-102-222-82-4.ngrok-free.app/cv/match', data);
+  postTricv(resume_folder,job_path,keywords): Observable<any>{
+    return this.http.post<any>('https://efaf-102-222-82-4.ngrok-free.app/cv/match', {}, {
+      headers: {}, 
+      params: {
+        "resume_folder": resume_folder,
+        "job_path": job_path,
+        "keywords":keywords
+      }
+      
+    } );
   }
+
+
 }

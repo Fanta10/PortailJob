@@ -11,22 +11,22 @@
                             <thead>
                                 <tr>
                                     <th scope="col">Nom</th>
-                                    <th scope="col">Prenom</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Contact</th>
+                                    <!-- <th scope="col">Prenom</th>
+                                    <th scope="col">Email</th> -->
+                                    <!-- <th scope="col">Contact</th> -->
                                     <th scope="col">CV</th>
-                                    <th scope="col">% de matching</th>
+                                    <th scope="col">% de correspondance</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let materiel of data">
+                                <tr *ngFor="let materiel of CvRetenus">
                                     <td>{{ materiel.nom }}</td>
-                                    <td>{{ materiel.prenom }}</td>
-                                    <td>{{ materiel.email }}</td>
+                                    <td>{{ materiel.nom_cv }}</td>
+                                    <!-- <td>{{ materiel.email }}</td>
                                     <td>{{ materiel.contact }}</td>
-                                    <td>{{ materiel.cv }}</td>
-                                    <td>{{ materiel.matching }}</td>
+                                    <td>{{ materiel.nom_cv }}</td> -->
+                                    <td>{{ materiel.match_percentage}} %</td>
                                     <td>
                                         <!-- <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#editRex" data-bs-whatever="@getbootstrap" (click)="chargeData(materiel)">Modifier</button> -->
                                         <button class="btn btn-success ms-2">Télécharger cv</button>

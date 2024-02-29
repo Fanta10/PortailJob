@@ -8,7 +8,10 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class ResultatComponent implements OnInit {
   titre_offre: string;
+  CvRetenus: string;
+  results: any
   data: any[];
+  variable : any[]
  data1 = {
     nom: 'fanta',
     prenom: 'fatim',
@@ -29,12 +32,19 @@ export class ResultatComponent implements OnInit {
   
 
   constructor(private route: ActivatedRoute) { 
-      this.route.queryParams.subscribe(params => {this.titre_offre = params['TitreOffre']})
+      //this.route.queryParams.subscribe(params => {this.titre_offre = params['TitreOffre'],this.CvRetenus = params['data']})
     
   }
 
   ngOnInit(): void {
-this.data = [this.data1,this.data2]
+    //this.data = [this.data1,this.data2]
+    //console.log(typeof this.CvRetenus)
+    //this.variable = JSON.parse(this.CvRetenus)
+    this.results = JSON.parse(localStorage.getItem('resultsCv'));
+    this.titre_offre = this.results.offre;
+    this.CvRetenus = this.results.data;
+    
+    
 
   }
   

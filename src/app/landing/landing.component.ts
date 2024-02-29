@@ -12,9 +12,9 @@ export class LandingComponent implements OnInit {
   focus: any;
   focus1: any;
   myFormenv!: FormGroup;
-  monOffre1: string = 'Réseau telecom'
-  monOffre2: string = 'Developpeur Full Stack'
-  monOffre3: string = 'Chef Projet'
+  monOffre1: string = 'Data_Scientist'
+  monOffre2: string = 'Developpeur_Full_Stack'
+  monOffre3: string = 'Chef_Projet'
   Offres=[this.monOffre1,this.monOffre2,this.monOffre3]
 
   constructor( private fb : FormBuilder,  private route: Router){}

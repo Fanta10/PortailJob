@@ -41,7 +41,7 @@ export class FormsComponent implements OnInit {
     }
     var formData = new FormData();
     formData.append("file" , this.file)
-    formData.append("upload_folder", this.chemindest)
+    
     formData.append("title",this.titreOffre)
     console.log('file ' + this.file)
     console.log('upload_folder '+ this.chemindest)
