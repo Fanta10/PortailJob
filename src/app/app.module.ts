@@ -1,3 +1,4 @@
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -22,6 +23,8 @@ import { LandingAdminComponent } from './shared/landingAdmin/landing-admin/landi
 import { ResultatComponent } from './resultat/resultat/resultat.component';
 import { NewOffreComponent } from './new-offre/new-offre.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { ParametreComponent } from './parametre/parametre.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,8 @@ import { HttpClientModule } from '@angular/common/http';
     FormsComponent,
     LandingAdminComponent,
     ResultatComponent,
-    NewOffreComponent
+    NewOffreComponent,
+    ParametreComponent
   ],
   imports: [
     BrowserModule,
@@ -47,7 +51,8 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     AppRoutingModule,
     HomeModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

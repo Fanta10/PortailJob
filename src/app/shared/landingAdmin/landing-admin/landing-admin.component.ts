@@ -17,11 +17,19 @@ export class LandingAdminComponent implements OnInit {
   postule: any;
   keywords: string 
   CvRetenus: any[];
+  conf: string;
+  confNumber: number
 
 
   constructor(private route:Router, private http : HttpServiceTriCVService) { }
 
   ngOnInit(): void {
+    this.conf = localStorage.getItem('conf')
+    // Convertir la valeur en nombre
+ this.confNumber = parseInt(localStorage.getItem('conf')); // Pour les nombres entiers
+    console.log('conf ' + this.conf)
+    console.log('type' +this. confNumber)
+    console.log(typeof this.confNumber)
   }
 
   sendInfos(offre) {
@@ -41,7 +49,7 @@ export class LandingAdminComponent implements OnInit {
       job_path: this.nom_fichier,
       keywords : "deep learning, machine learning"
     }
-    this.http.postTricv(this.chemin,this.nom_fichier,this.keywords).subscribe(data => {
+    this.http.postTricv2(this.chemin,this.nom_fichier,this.keywords,this.confNumber).subscribe(data => {
       console.log('data' + JSON.stringify(data));
       this.CvRetenus = data;
       localStorage.setItem("resultsCv", JSON.stringify({ data, offre }))

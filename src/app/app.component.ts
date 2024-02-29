@@ -15,6 +15,7 @@ var navbarHeight = 0;
     styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+
     private _router: Subscription;
 
     constructor( private renderer : Renderer2, private router: Router, @Inject(DOCUMENT,) private document: any, private element : ElementRef, public location: Location) {}
@@ -52,6 +53,11 @@ export class AppComponent implements OnInit {
         lastScrollTop = st;
     };
     ngOnInit() {
+if (!localStorage.getItem('conf')) {
+    // Si la clé n'existe pas, définissez une valeur par défaut
+    localStorage.setItem('conf', '45');
+}
+
       var navbar : HTMLElement = this.element.nativeElement.children[0].children[0];
       this._router = this.router.events.pipe(filter(event => event instanceof NavigationEnd)).subscribe((event: NavigationEnd) => {
           if (window.outerWidth > 991) {

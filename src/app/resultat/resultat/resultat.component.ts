@@ -7,6 +7,8 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./resultat.component.css']
 })
 export class ResultatComponent implements OnInit {
+  pages:number = 1;
+  dataset: any[] = ['1','2','3','4','5','6','7','8','9','10'];
   titre_offre: string;
   CvRetenus: string;
   results: any
@@ -37,6 +39,8 @@ export class ResultatComponent implements OnInit {
   }
 
   ngOnInit(): void {
+
+
     //this.data = [this.data1,this.data2]
     //console.log(typeof this.CvRetenus)
     //this.variable = JSON.parse(this.CvRetenus)

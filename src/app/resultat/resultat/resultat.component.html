@@ -20,7 +20,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr *ngFor="let materiel of CvRetenus">
+                                <tr *ngFor="let materiel of CvRetenus | paginate: { itemsPerPage: 2, currentPage: pages }">
                                     <td>{{ materiel.nom }}</td>
                                     <td>{{ materiel.nom_cv }}</td>
                                     <!-- <td>{{ materiel.email }}</td>
@@ -40,10 +40,14 @@
         </div>
     </div>
     <a
-        ttype
+        
         class="btn btn-info"
         routerLink="/admin"
     >
         Retour
     </a>
+    <div class="justify-content-center">
+<pagination-controls (pageChange)="pages = $event"></pagination-controls> 
+    </div>
+   
 </div>

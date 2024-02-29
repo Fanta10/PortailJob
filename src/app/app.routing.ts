@@ -12,6 +12,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { ResultatComponent } from './resultat/resultat/resultat.component';
 import { FormsComponent } from './shared/forms/forms/forms.component';
 import { SignupComponent } from './signup/signup.component';
+import { ParametreComponent } from './parametre/parametre.component';
 
 const routes: Routes =[
     { path: 'home',             component: LandingComponent},
@@ -22,7 +23,8 @@ const routes: Routes =[
   { path: 'admin', component: AdminComponent },
   { path: 'post', component: FormsComponent },
   { path: 'resultat', component: ResultatComponent },
-    { path: 'newOffre', component: NewOffreComponent },
+  { path: 'newOffre', component: NewOffreComponent },
+    { path: 'conf', component: ParametreComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];
 

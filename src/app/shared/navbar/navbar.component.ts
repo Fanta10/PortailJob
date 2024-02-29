@@ -58,5 +58,9 @@ export class NavbarComponent implements OnInit {
     }
      login(){
             this.router.navigate(['login'])
-        }
+     }
+    
+    isHomeRoute(): boolean {
+    return this.router.url === '/home';
+  }
 }

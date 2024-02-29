@@ -21,5 +21,18 @@ export class HttpServiceTriCVService {
     } );
   }
 
+   postTricv2(resume_folder,job_path,keywords,threshold): Observable<any>{
+    return this.http.post<any>('https://efaf-102-222-82-4.ngrok-free.app/cv/match', {}, {
+      headers: {}, 
+      params: {
+        "resume_folder": resume_folder,
+        "job_path": job_path,
+        "keywords": keywords,
+        "threshold":threshold
+      }
+      
+    } );
+  }
+
 
 }

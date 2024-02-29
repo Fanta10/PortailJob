@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
 import { HttpServiceCVService } from 'src/app/http-service-cv.service';
 
 @Component({
@@ -18,7 +18,7 @@ export class FormsComponent implements OnInit {
 
   file: File;
 
-  constructor(private route: ActivatedRoute, private fb:FormBuilder, private apiCV: HttpServiceCVService) { 
+  constructor(private router : Router,private route: ActivatedRoute, private fb:FormBuilder, private apiCV: HttpServiceCVService) { 
     this.route.queryParams.subscribe(params => {this.titreOffre = params['TitreOffre']})
   }
 
@@ -46,7 +46,10 @@ export class FormsComponent implements OnInit {
     console.log('file ' + this.file)
     console.log('upload_folder '+ this.chemindest)
       this.apiCV.postCV(formData).subscribe(data => {
-      console.log(data);
+        console.log(data);
+        alert("offre ajoutée avec succès")
+        window.location.reload()
+        //this.router.navigate(['/admin'])
     });
     
     //console.log('cv' + JSON.stringify(this.postule.value))

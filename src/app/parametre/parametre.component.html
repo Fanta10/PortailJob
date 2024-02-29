@@ -1,0 +1,25 @@
+<div>
+    <br>
+    <br>
+    <form class="container shadow-lg p-3 mb-3 bg-body rounded" [formGroup]="myConf">
+        <h2 class="text-center text-dark mb-4">Configurer votre pourcentage</h2>
+        <div class="form-group">
+            <div class="row">
+                <div class="col-12">
+                    <div class="mb-1">
+                        <label for="code-name" class="col-form-label">Pourcentage:</label>
+                        <input type="number" class="form-control" formControlName="conf" id="code-name" placeholder="Entrez votre pourcentage de configuration">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-success" (click)="save()">Enregistrer</button>
+            <a type="button" class="btn btn-secondary" routerLink="/admin">Retour</a>
+        </div>
+    </form>
+
+    <br>
+    <br>
+</div>
