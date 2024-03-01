@@ -11,6 +11,7 @@ export class NavbarComponent implements OnInit {
     public isCollapsed = true;
     private lastPoppedUrl: string;
     private yScrollStack: number[] = [];
+    titlee  : string
     
 
     constructor(public location: Location, private router: Router) {
@@ -36,9 +37,9 @@ export class NavbarComponent implements OnInit {
     }
 
     isHome() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
+        this.titlee = this.location.prepareExternalUrl(this.location.path());
 
-        if( titlee === '#/home' ) {
+        if( this.titlee === '#/home' ) {
             return true;
         }
         else {
@@ -46,8 +47,8 @@ export class NavbarComponent implements OnInit {
         }
     }
     isDocumentation() {
-        var titlee = this.location.prepareExternalUrl(this.location.path());
-        if( titlee === '#/documentation' ) {
+        this.titlee = this.location.prepareExternalUrl(this.location.path());
+        if( this.titlee === '#/documentation' ) {
             return true;
         }
         else {

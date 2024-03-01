@@ -42,12 +42,14 @@
                                     </p>
                                     <div>
                                         <span class="badge badge-pill badge-primary">Date de publication : 27/02/2024</span>
-                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 01/03/2024</span>
+                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 05/03/2024</span>
                                     </div>
                                     <div class="d-flex">
                                         <button
                                             class="btn btn-success mt-4"
                                             (click)="sendInfos(monOffre1)"
+                                            
+
                                         >
                                             <i class="bi bi-plus-lg fw-bold"></i>
                                             Postuler
@@ -79,12 +81,13 @@
                                     </p>
                                     <div>
                                         <span class="badge badge-pill badge-primary">Date de publication : 27/02/2024</span>
-                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 01/03/2024</span>
+                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 10/03/2024</span>
                                     </div>
                                     <div class="d-flex">
                                         <button
                                             class="btn btn-success mt-4"
                                             (click)="sendInfos(monOffre2)"
+                                        
                                         >
                                             <i class="bi bi-plus-lg fw-bold"></i>
                                             Postuler
@@ -123,6 +126,7 @@
                                         <button
                                             class="btn btn-success mt-4"
                                             (click)="sendInfos(monOffre3)"
+                                            [disabled]="checkExpiration(dateExpirationOffre1) || checkExpiration(dateExpirationOffre2) || checkExpiration(dateExpirationOffre3)"
                                         >
                                             <i class="bi bi-plus-lg fw-bold"></i>
                                             Postuler

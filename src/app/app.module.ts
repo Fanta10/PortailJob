@@ -26,6 +26,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { ParametreComponent } from './parametre/parametre.component';
 
+//import { AngularFileSaverModule } from 'angular-file-saver';
+//import {compareAsc, format } from 'date-fns'; // Importez la fonction format de date-fns
+
+
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +60,10 @@ import { ParametreComponent } from './parametre/parametre.component';
     AppRoutingModule,
     HomeModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    
+   
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

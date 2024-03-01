@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { DownloadfileService } from 'src/app/downloadfile.service';
 
 @Component({
   selector: 'app-resultat',
@@ -33,7 +34,7 @@ export class ResultatComponent implements OnInit {
  };
   
 
-  constructor(private route: ActivatedRoute) { 
+  constructor(private route: ActivatedRoute,private downloads:DownloadfileService) { 
       //this.route.queryParams.subscribe(params => {this.titre_offre = params['TitreOffre'],this.CvRetenus = params['data']})
     
   }
@@ -50,6 +51,12 @@ export class ResultatComponent implements OnInit {
     
     
 
+  }
+
+  downloadfile() {
+    this.downloads.download('').subscribe(
+      //blob=>saveAs(blob,'test.pdf')
+    )
   }
   
 

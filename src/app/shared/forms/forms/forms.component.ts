@@ -14,6 +14,7 @@ export class FormsComponent implements OnInit {
   chemincv: any;
   chemindest: string = 'D:/CV';
   ma_data: any;
+
   
 
   file: File;
