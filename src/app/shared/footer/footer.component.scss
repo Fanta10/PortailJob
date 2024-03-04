@@ -1,6 +1,6 @@
 footer {
     background-color: #f8f9fa;
-    background-color: #838d97;
+    background-color: #838d97 !important;
     /* Couleur de fond du footer */
     padding: 20px 0;
     text-align: center;
@@ -8,4 +8,13 @@ footer {
     position: fixed;
     bottom: 0;
     left: 0;
+}
+.navbar {
+
+    background-color: #e4e7e9 !important ;
+    text-align: center;
+    padding-right: 10%;
+    text-align: center;
+    
+    /* Vert clair */
 }

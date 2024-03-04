@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
 })
 
 export class LandingComponent implements OnInit {
+  dataset1: any[];
+  pages: number = 1;
+  dataset: any[] = ['1','2','3','4','5','6','7','8','9','10'];
   focus: any;
   focus1: any;
   postule!: FormGroup;

@@ -24,12 +24,14 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (this.mylogin.valid) {
-      if (this.mylogin.value.email === 'fanta.kamate@gs2e.ci' && this.mylogin.value.pwd === 'fanta') {
+      if ((this.mylogin.value.email == 'fanta.kamate@gs2e.ci') && (this.mylogin.value.pwd == 'fanta')) {
         this.router.navigate(['/admin']);
-      } else {
+      }
+      else {
         alert("Email ou mot de passe incorrect !");
       }
-    } else {
+    }
+    else {
       alert("Veuillez remplir correctement les champs.");
     }
   }

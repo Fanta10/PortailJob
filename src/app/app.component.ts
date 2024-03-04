@@ -78,4 +78,12 @@ if (!localStorage.getItem('conf')) {
       });
       this.hasScrolled();
     }
+
+    isHomeRoute(): boolean {
+    return this.router.url === '/home';
+  }
+
+  isAdminRoute(): boolean {
+    return this.router.url === '/admin';
+  }
 }

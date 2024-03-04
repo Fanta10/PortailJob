@@ -20,6 +20,14 @@
                 ></polygon>
             </svg>
         </div>
+            <!-- Barre de recherche -->
+    <div class="search-container haut">
+             <!-- texte bienvenue -->
+        <h2 class="text-white text-center">Bienvenue sur le portail des offres d'emplois</h2>
+
+        <label for="" class="text-white fw-bold text-center">Rechercher une offre: </label>
+        <input type="search" class="form-control me-5" id="searchInput" onkeyup="filterOffers()" placeholder="Rechercher par titre...">
+    </div>
     </section>
     <section class="section section-lg pt-lg-0 mt--200">
         <div class="container">
@@ -55,7 +63,7 @@
                                             
                                             
                                             (click)="sendInfos(monOffre1)"
-                                            class="btn btn-info mt-4 ml-2"
+                                            class="btn btn-info mt-4 ml-2 text-dark"
                                             
                                         >
                                             Trier cv
@@ -146,7 +154,19 @@
                 </div>
             </div>
         </div>
-
+        <!--  -->
+        <div>
+  <h2
+    *ngFor="
+      let data of dataset1 | paginate: { itemsPerPage: 2, currentPage: pages }
+    "
+  >
+    
+  </h2>
+</div>
+ <div class="justify-content-center">
+<pagination-controls (pageChange)="pages = $event"></pagination-controls> 
+    </div>
     </section>
 
 </main>

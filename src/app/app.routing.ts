@@ -19,11 +19,11 @@ const routes: Routes =[
     { path: 'user-profile',     component: HomeComponent },
     { path: 'register',           component: SignupComponent },
     { path: 'landing',          component: ProfileComponent },
-  { path: 'login', component: LoginComponent },
-  { path: 'admin', component: AdminComponent },
-  { path: 'post', component: FormsComponent },
-  { path: 'resultat', component: ResultatComponent },
-  { path: 'newOffre', component: NewOffreComponent },
+    { path: 'login', component: LoginComponent },
+    { path: 'admin', component: AdminComponent },
+    { path: 'post', component: FormsComponent },
+    { path: 'resultat', component: ResultatComponent },
+    { path: 'newOffre', component: NewOffreComponent },
     { path: 'conf', component: ParametreComponent },
     { path: '', redirectTo: 'home', pathMatch: 'full' }
 ];

@@ -1,4 +1,178 @@
-<app-navbaradmin></app-navbaradmin>
-<app-landing-admin></app-landing-admin>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<!-- <app-navbaradmin></app-navbaradmin> -->
+
+<main class="profile-page">
+    <section class="section-profile-cover section-shaped my-0">
+        <!-- Circles background -->
+        <div class="shape shape-style-1 shape-primary alpha-4">
+            <p>Texte</p>
+        </div>
+        <!-- SVG separator -->
+        <div class="separator separator-bottom separator-skew">
+            <svg
+                x="0"
+                y="0"
+                viewBox="0 0 260 100"
+                preserveAspectRatio="none"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+            >
+                <polygon
+                    class="fill-white"
+                    points="2560 0 2560 100 0 100"
+                ></polygon>
+            </svg>
+        </div>
+            <!-- Barre de recherche -->
+    <div class="search-container haut">
+             <!-- texte bienvenue -->
+        <h2 class="text-white text-center">Bienvenue sur le portail des offres d'emplois</h2>
+
+        <label for="" class="text-white fw-bold text-center">Rechercher une offre: </label>
+        <input type="search" class="form-control me-5" id="searchInput" onkeyup="filterOffers()" placeholder="Rechercher par titre...">
+    </div>
+    </section>
+    <section class="section section-lg pt-lg-0 mt--200">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-12">
+                    <div class="row row-grid">
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                        <i class="ni ni-check-bold"></i>
+                                    </div>
+                                    <h6 class="text-primary text-uppercase">{{monOffre1}}</h6>
+                                    <p class="description mt-3">
+                                        Nous recherchons un Data Scientist passionné et expérimenté pour rejoindre notre équipe dynamique. 
+                                        En tant que Data Scientist, vous serez chargé(e) d'explorer, d'analyser et d'interpréter des ensembles de données complexes afin de fournir des 
+                                        insights significatifs pour soutenir nos objectifs commerciaux et stratégiques.
+                                    </p>
+                                    <div>
+                                        <span class="badge badge-pill badge-primary">Date de publication : 27/02/2024</span>
+                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 01/03/2024</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a
+                                            type="button"
+                                            class="btn btn-danger mt-4"
+                                            routerLink="/postModif"
+                                        >
+                                            <i class="bi bi-plus-lg fw-bold"></i>
+                                            Modifier
+                                        </a>
+                                        <button
+                                            
+                                            
+                                            (click)="sendInfos(monOffre1)"
+                                            class="btn btn-info mt-4 ml-2 text-dark"
+                                            
+                                        >
+                                            Trier cv
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Autres cartes -->
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                        <i class="ni ni-check-bold"></i>
+                                    </div>
+                                    <h6 class="text-primary text-uppercase">{{monOffre2}}</h6>
+                                    <p class="description mt-3">
+                                    Nous sommes à la recherche d'un(e) Développeur(se) Full Stack talentueux(se) et passionné(e) pour rejoindre notre équipe dynamique. En tant que Développeur(se) Full Stack, vous serez responsable du développement et de la maintenance de nos applications web, de la conception 
+                                        de l'architecture logicielle à l'implémentation de fonctionnalités frontales et back-end. 
+                                    </p>
+                                    <div>
+                                        <span class="badge badge-pill badge-primary">Date de publication : 27/02/2024</span>
+                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 05/03/2024</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a
+                                            type="button"
+                                            class="btn btn-danger mt-4"
+                                            routerLink="/postModif"
+                                        >
+                                            <i class="bi bi-plus-lg fw-bold"></i>
+                                            Modifier
+                                        </a>
+                                        <a
+                                            
+                                            target="_blank"
+                                            (click)="sendInfos(monOffre2)"
+                                            class="btn btn-info mt-4 ml-2"
+                                            rel="noopener"
+                                        >
+                                            Trier CV
+                                        </a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- autre card -->
+                        <div class="col-lg-4">
+                            <div class="card card-lift--hover shadow border-0">
+                                <div class="card-body py-5">
+                                    <div class="icon icon-shape icon-shape-primary rounded-circle mb-4">
+                                        <i class="ni ni-check-bold"></i>
+                                    </div>
+                                    <h6 class="text-primary text-uppercase">{{monOffre3}}</h6>
+                                    <p class="description mt-3">
+                                        Nous sommes à la recherche d'un Chef de Projet dynamique et expérimenté pour rejoindre notre équipe et diriger la gestion de projets innovants dans le domaine de la technologie. En tant que Chef de Projet, vous serez responsable de la planification, 
+                                        de la coordination et de l'exécution de projets stratégiques, en veillant à ce qu'ils soient livrés dans les délais et conformément aux exigences spécifiées. 
+                                    </p>
+                                    <div>
+                                        <span class="badge badge-pill badge-primary">Date de publication : 27/02/2024</span>
+                                        <span class="badge badge-pill badge-primary end">Date d'expiration : 05/03/2024</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <a
+                                            type="button"
+                                            class="btn btn-danger mt-4"
+                                            routerLink="/postModif"
+                                        >
+                                            <i class="bi bi-plus-lg fw-bold"></i>
+                                            modifier
+                                        </a>
+                                        <a
+                                            type="button"
+                                            target="_blank"
+                                            (click)="sendInfos(monOffre3)"
+                                            class="btn btn-info mt-4 ml-2"
+                                            rel="noopener"
+                                        >
+                                            Trier CV
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- autre -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  -->
+        <div>
+  <h2
+    *ngFor="
+      let data of dataset1 | paginate: { itemsPerPage: 2, currentPage: pages }
+    "
+  >
+    
+  </h2>
+</div>
+ <div class="justify-content-center">
+<pagination-controls (pageChange)="pages = $event"></pagination-controls> 
+    </div>
+    </section>
+
+</main>
+
+<!-- <app-footer></app-footer> -->
+<!-- <router-outlet></router-outlet> -->
+

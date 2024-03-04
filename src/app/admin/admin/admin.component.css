@@ -1,0 +1,51 @@
+.end {
+    margin-left: 0%;
+    margin-top: 4%;
+}
+
+.boutonModal {
+    margin-left: 0px;
+}
+
+.taille {
+    width: 0;
+}
+
+.bas {
+    margin-top: 200%;
+}
+
+.haut {
+    padding-top: 10%;
+    width: 500px;
+
+}
+
+h2 {
+
+    text-shadow: 5%;
+}
+
+div {
+    text-align: center;
+    padding: 10px;
+}
+
+h2 {
+
+    padding: 10px;
+}
+.navbar {
+    background-color: #2a8176;
+    /* Vert clair */
+}
+
+.navbar .btn-primary {
+    margin-left: auto;
+    /* Positionnement à droite */
+}
+
+.gs2e {
+    width: 10%;
+    height: 10%;
+}

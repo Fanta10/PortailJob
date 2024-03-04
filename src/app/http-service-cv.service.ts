@@ -11,6 +11,6 @@ export class HttpServiceCVService {
 
 
   postCV(data :any) : Observable<any>{
-    return this.http.post<any>('https://efaf-102-222-82-4.ngrok-free.app/upload/', data);
+    return this.http.post<any>('http://109.199.114.28:8000/upload/', data);
   }
 }

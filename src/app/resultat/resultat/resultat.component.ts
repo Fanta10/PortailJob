@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DownloadfileService } from 'src/app/downloadfile.service';
+import { HttpServiceTriCVService } from 'src/app/http-service-tri-cv.service';
 
 @Component({
   selector: 'app-resultat',
@@ -13,6 +14,7 @@ export class ResultatComponent implements OnInit {
   titre_offre: string;
   CvRetenus: string;
   results: any
+  pourcentage : number
   data: any[];
   variable : any[]
  data1 = {
@@ -34,7 +36,7 @@ export class ResultatComponent implements OnInit {
  };
   
 
-  constructor(private route: ActivatedRoute,private downloads:DownloadfileService) { 
+  constructor(private route: ActivatedRoute,private downloads:HttpServiceTriCVService) { 
       //this.route.queryParams.subscribe(params => {this.titre_offre = params['TitreOffre'],this.CvRetenus = params['data']})
     
   }
@@ -48,17 +50,24 @@ export class ResultatComponent implements OnInit {
     this.results = JSON.parse(localStorage.getItem('resultsCv'));
     this.titre_offre = this.results.offre;
     this.CvRetenus = this.results.data;
+    this.pourcentage = JSON.parse(localStorage.getItem('conf'));
     
     
 
   }
 
-  downloadfile() {
-    this.downloads.download('').subscribe(
-      //blob=>saveAs(blob,'test.pdf')
-    )
-  }
+  // ouvrir() {
+  //   this.CvRetenus.resume_path
+  // }
   
-
+// Définir la fonction pour ouvrir le CV
+    ouvrirCV(nomCV: string) {
+        // Remplacez l'URL de base et le dossier des CV selon votre configuration
+        const baseUrl = 'D:\\AAAA\argon-design-system-angular-master\\argon-design-system-angular-master\\src\\assets\\cv\\';
+        const cvPath = baseUrl + nomCV;
+        
+        // Ouvrir le CV dans une nouvelle fenêtre ou un nouvel onglet
+        window.open(cvPath, '_blank');
+    }
 
 }

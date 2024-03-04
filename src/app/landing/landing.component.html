@@ -1,11 +1,13 @@
 <main class="profile-page">
     <section class="section-profile-cover section-shaped my-0">
+        
         <!-- Circles background -->
         <div class="shape shape-style-1 shape-primary alpha-4">
             <p>Texte</p>
         </div>
         <!-- SVG separator -->
         <div class="separator separator-bottom separator-skew">
+            
             <svg
                 x="0"
                 y="0"
@@ -19,8 +21,20 @@
                     points="2560 0 2560 100 0 100"
                 ></polygon>
             </svg>
+            
         </div>
+   
+        <!-- Barre de recherche -->
+    <div class="search-container haut">
+             <!-- texte bienvenue -->
+        <h2 class="text-white text-center">Bienvenue sur le portail des offres d'emplois</h2>
+
+        <label for="" class="text-white fw-bold text-center">Rechercher une offre: </label>
+        <input type="search" class="form-control me-5" id="searchInput" onkeyup="filterOffers()" placeholder="Rechercher par titre...">
+    </div>
     </section>
+
+
     <section class="section section-lg pt-lg-0 mt--200">
         <div class="container">
             <div class="row justify-content-center">
@@ -149,7 +163,40 @@
                 </div>
             </div>
         </div>
+<!--  -->
 
+<div>
+  <h2
+    *ngFor="
+      let data of dataset1 | paginate: { itemsPerPage: 2, currentPage: pages }
+    "
+  >
+    <!-- {{ data }} -->
+  </h2>
+</div>
+<div class="justify-content-center">
+<pagination-controls (pageChange)="pages = $event"></pagination-controls>
+</div>
     </section>
 
 </main>
+<script>
+    function filterOffers() {
+        var input, filter, cards, card, title, i, txtValue;
+        input = document.getElementById('searchInput');
+        filter = input.value.toUpperCase();
+        cards = document.querySelectorAll('.card');
+
+        cards.forEach(function(card) {
+            title = card.querySelector('h6.text-primary');
+            if (title) {
+                txtValue = title.textContent || title.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    card.style.display = '';
+                } else {
+                    card.style.display = 'none';
+                }
+            }
+        });
+    }
+</script>

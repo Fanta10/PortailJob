@@ -8,7 +8,9 @@ import { HttpServiceTriCVService } from 'src/app/http-service-tri-cv.service';
   styleUrls: ['./landing-admin.component.css']
 })
 export class LandingAdminComponent implements OnInit {
-
+pages:number = 1;
+  dataset: any[] = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+  dataset1: any[];
   monOffre1: string = 'Data_Scientist'
   monOffre2: string = 'Developpeur_Full_Stack'
   monOffre3: string = 'Chef_Projet'
